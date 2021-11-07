@@ -1,0 +1,39 @@
+<div class="container"> 
+    <p class="display-4">
+        Update Invoice 
+    </p>
+<form (ngSubmit)="onSubmit()" [formGroup]="updateForm">
+    <div class="form-group" >
+        <div class="mb-3">
+            <label class="form-label">Id invoice </label>
+            <input type="number" formControlName="idInvoice" class="form-control" />
+            <div *ngIf="myIdInvoice.invalid && myIdInvoice.touched" class="alert alert-danger" role="alert"> Champs obligatoire </div>   
+        </div>    
+
+        <div class="mb-3">
+            <label class="form-label">Discount  </label>
+            <input type="number" formControlName="discount" class="form-control" />
+            <div *ngIf="myDiscount.invalid && myIdInvoice.touched" class="alert alert-danger" role="alert"> Champs obligatoire </div>   
+        </div>   
+
+        <div class="mb-3">
+            <label class="form-label">bill  </label>
+            <input type="number" formControlName="bill" class="form-control" />
+            <div *ngIf="myBill.invalid && myBill.touched" class="alert alert-danger" role="alert"> Champs obligatoire </div>   
+        </div>  
+
+        <div class="mb-3">
+            <label class="form-label">Date bill  </label>
+            <input type="text" formControlName="dateBill" class="form-control" />
+            <div *ngIf="myDateBill.invalid && myDateBill.touched" class="alert alert-danger" role="alert"> Champs obligatoire </div>   
+        </div>  
+
+        <div class="mb-3">
+            <label class="form-label">status  </label>
+            <input type="text" formControlName="status" class="form-control" />
+            <div *ngIf="myStatus.invalid && myStatus.touched" class="alert alert-danger" role="alert"> Champs obligatoire </div>   
+        </div>  
+    </div>
+    <input type="submit" class="btn btn-primary" value="Submit">       
+</form>
+</div>

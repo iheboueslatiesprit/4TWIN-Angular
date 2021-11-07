@@ -1,0 +1,32 @@
+<div class="container">
+    <p class="display-4">
+        List invoices
+    </p>
+    <table class="table table-striped table-bordered">
+        <thead>
+            <tr>
+                <th>ID :</th>
+                <th>Offre </th>
+                <th>Bill</th>
+                <th>dateBill</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let invoice of invoices; let index = index">
+                <td>{{invoice.idInvoice}} </td>
+                <td> {{invoice.discountAmount}}</td>
+                <td> {{invoice.billAmount}}</td>
+                <td> {{invoice.dateBill}}</td>
+                <td> {{invoice.Status}}</td>        
+                <td > <button type="button" (click)="supprimer(index)" class="btn btn-primary"> Supprimer </button> </td>              
+            <!--   <td> <input type="button" class="btn btn-primary" 
+                routerLink="editinvoice/{{invoice.idInvoice}}" value="Edit" >  </td> --> 
+                <td> <button type="button"(click)="edit(index)" class="btn btn-primary" > Edit </button> </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div  *ngIf="editing" class="container"> 
+<app-edit-invoice-component (emitter)="update($event)" [invoice]="invoice"> </app-edit-invoice-component>
+</div>
