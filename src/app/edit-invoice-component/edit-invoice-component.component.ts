@@ -13,7 +13,7 @@ export class EditInvoiceComponentComponent implements OnInit {
   @Input() invoice : Invoice ;
   constructor() { }
   @Output() emitter = new EventEmitter<Invoice> () ;
-
+ 
   ngOnInit(): void {
     this.updateForm = new FormGroup ({
       idInvoice : new FormControl (this.invoice.idInvoice,Validators.required),

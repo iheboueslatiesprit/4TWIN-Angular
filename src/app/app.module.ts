@@ -10,11 +10,15 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { AddInvoiceComponentComponent } from './add-invoice-component/add-invoice-component.component';
 import { EditInvoiceComponentComponent } from './edit-invoice-component/edit-invoice-component.component';
-import { ListInvoiceComponentComponent } from './list-invoice-component/list-invoice-component.component'
+import { ListInvoiceComponentComponent } from './list-invoice-component/list-invoice-component.component';
+import { AddUserComponentComponent } from './add-user-component/add-user-component.component';
+import { ErrorComponentComponent } from './error-component/error-component.component'
 
-const ROUTES :Routes = [
-  {path : 'editinvoice/:id', component : EditInvoiceComponentComponent}
-]
+const ROUTES: Routes = [
+  {path : 'editinvoice/:id', component : EditInvoiceComponentComponent},
+  {path: 'addUser', component: AddUserComponentComponent},
+  {path: 'invoices', component: ListInvoiceComponentComponent}
+];
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,6 +26,8 @@ const ROUTES :Routes = [
     AddInvoiceComponentComponent,
     EditInvoiceComponentComponent,
     ListInvoiceComponentComponent,
+    AddUserComponentComponent,
+    ErrorComponentComponent,
   ],
   imports: [
     BrowserModule,

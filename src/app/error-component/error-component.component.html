@@ -1,0 +1,6 @@
+<div class="alert alert-danger" role="alert" >
+<ng-container *ngIf="error && error['required']" > 
+    Required</ng-container>
+<ng-container *ngIf="error && error['minlength']"> Au moin 3 characteres </ng-container>
+<ng-container *ngIf="error && error['pattern']"> Email pattern faux </ng-container>
+</div>
