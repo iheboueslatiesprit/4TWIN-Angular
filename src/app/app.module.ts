@@ -12,12 +12,15 @@ import { AddInvoiceComponentComponent } from './add-invoice-component/add-invoic
 import { EditInvoiceComponentComponent } from './edit-invoice-component/edit-invoice-component.component';
 import { ListInvoiceComponentComponent } from './list-invoice-component/list-invoice-component.component';
 import { AddUserComponentComponent } from './add-user-component/add-user-component.component';
-import { ErrorComponentComponent } from './error-component/error-component.component'
+import { ErrorComponentComponent } from './error-component/error-component.component';
+import { ConvertisseurComponentComponent } from './convertisseur-component/convertisseur-component.component';
+import { ToEuroConvertComponentComponent } from './to-euro-convert-component/to-euro-convert-component.component'
 
 const ROUTES: Routes = [
   {path : 'editinvoice/:id', component : EditInvoiceComponentComponent},
   {path: 'addUser', component: AddUserComponentComponent},
-  {path: 'invoices', component: ListInvoiceComponentComponent}
+  {path: 'invoices', component: ListInvoiceComponentComponent},
+  {path: 'convert', component: ConvertisseurComponentComponent},
 ];
 @NgModule({
   declarations: [
@@ -28,6 +31,8 @@ const ROUTES: Routes = [
     ListInvoiceComponentComponent,
     AddUserComponentComponent,
     ErrorComponentComponent,
+    ConvertisseurComponentComponent,
+    ToEuroConvertComponentComponent,
   ],
   imports: [
     BrowserModule,
