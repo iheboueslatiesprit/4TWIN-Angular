@@ -1,0 +1,19 @@
+{ 
+  "invoices":[
+    {
+      "idInvoice":1,
+      "discountAmount":0,
+      "billAmount":20,
+      "dateBill":"2000/05/30",
+      "Status":true
+    },
+    {
+      "idInvoice":2,
+      "discountAmount":0,
+      "billAmount":20,
+      "dateBill":"2020/05/30",
+      "Status":true
+    }
+  ]
+}
+ 

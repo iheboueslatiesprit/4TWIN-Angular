@@ -1,3 +1,4 @@
+import { UserServiceService } from './services/user-service.service';
 import { Routes } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, Component } from '@angular/core';
@@ -14,13 +15,17 @@ import { ListInvoiceComponentComponent } from './list-invoice-component/list-inv
 import { AddUserComponentComponent } from './add-user-component/add-user-component.component';
 import { ErrorComponentComponent } from './error-component/error-component.component';
 import { ConvertisseurComponentComponent } from './convertisseur-component/convertisseur-component.component';
-import { ToEuroConvertComponentComponent } from './to-euro-convert-component/to-euro-convert-component.component'
+import { ToEuroConvertComponentComponent } from './to-euro-convert-component/to-euro-convert-component.component';
+import { ListUserComponentComponent } from './list-user-component/list-user-component.component';
+import { ListProductComponentComponent } from './list-product-component/list-product-component.component'
+import { HttpClientModule } from '@angular/common/http';
 
 const ROUTES: Routes = [
   {path : 'editinvoice/:id', component : EditInvoiceComponentComponent},
   {path: 'addUser', component: AddUserComponentComponent},
   {path: 'invoices', component: ListInvoiceComponentComponent},
   {path: 'convert', component: ConvertisseurComponentComponent},
+  {path: 'produits', component: ListProductComponentComponent}
 ];
 @NgModule({
   declarations: [
@@ -33,6 +38,8 @@ const ROUTES: Routes = [
     ErrorComponentComponent,
     ConvertisseurComponentComponent,
     ToEuroConvertComponentComponent,
+    ListUserComponentComponent,
+    ListProductComponentComponent,
   ],
   imports: [
     BrowserModule,
@@ -40,6 +47,7 @@ const ROUTES: Routes = [
     FormsModule,
     ReactiveFormsModule,
     RouterModule.forRoot(ROUTES),
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

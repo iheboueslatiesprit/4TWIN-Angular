@@ -10,10 +10,10 @@
                 <th>Bill</th>
                 <th>dateBill</th>
                 <th>Status</th>
-            </tr>
+            </tr> 
         </thead>
         <tbody>
-            <tr *ngFor="let invoice of invoices; let index = index">
+            <tr *ngFor="let invoice of invoicesJson; let index = index">
                 <td>{{invoice.idInvoice}} </td>
                 <td> {{invoice.discountAmount}}</td>
                 <td> {{invoice.billAmount}}</td>

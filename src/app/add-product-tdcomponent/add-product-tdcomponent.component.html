@@ -58,55 +58,10 @@
       </div>
     </div>
 
-    <div formGroupName="secondaire" *ngIf="suivant">
-      <div class="form-group row">
-        <label>iddetailproduit</label>
-        <input
-          type="text"
-          class="form-control"
-          formControlName="iddetailproduit"
-        />
-        <div
-          class="alert alert-danger"
-          role="alert"
-          *ngIf="myIdDetailProduit.invalid && myIdDetailProduit.touched"
-        >
-          obligatoire
-        </div>
-      </div>
-      <div class="form-group row">
-        <label>datecreation</label>
-        <input
-          type="text"
-          class="form-control"
-          formControlName="datecreation"
-        />
-      </div>
-      <div
-        class="alert alert-danger"
-        role="alert"
-        *ngIf="myDateCreation.invalid && myDateCreation.touched"
-      >
-        obligatoire
-      </div>
-    <div class="form-group row">
-      <label>datedernieremodification</label>
-      <input
-        type="text"
-        class="form-control"
-        formControlName="datedernieremodification"
-      />
-    </div>
-    <div
-      class="alert alert-danger"
-      role="alert"
-      *ngIf="myDateModif.invalid && myDateModif.touched"
-    >
-      obligatoire
-    </div>
+  <!-- <div formGroupName="secondaire" *ngIf="suivant"> --> 
     <div class="div-btn">
       <button   type="submit"  class="btn btn-primary" > submit </button>
     </div>
-  </div>
+ <!-- </div> --> 
   </form>
 </div>
